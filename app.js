@@ -2,6 +2,7 @@ const express = require('express');
 
 require('dotenv').config();
 const sequileze = require('./back/db/conexion');
+const indexView = require('./back/views/indexView');
 
 
 
@@ -39,7 +40,7 @@ async function serverStart() {
 
 serverStart();
 
-
+indexView(app);
 
 
 
