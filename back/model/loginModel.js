@@ -6,7 +6,7 @@ module.exports = class loginModel{
     }
 
     async find (user){
-        let result = await sequelize.query("SELECT [usuario],[password] FROM users WHERE [usuario] = '" + user.usuario + "' AND [password] = '" + user.password + "'");
+        let result = await sequelize.query("SELECT [users],[password] FROM Usuarios WHERE [users] = '" + user.usuario + "' AND [password] = '" + user.password + "'");
         if (result[0].length > 0) {
             if (user.user == result[0][0].user) {
                 return result[0][0];
