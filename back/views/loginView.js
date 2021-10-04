@@ -1,5 +1,5 @@
 const loginController = require('../controller/loginController')
-const validation = require('../middleware/validation')
+const validation = require('../middleware/validation/validation')
 
 module.exports = async (app) =>{
     app.post('/login',async(req,res)=>{

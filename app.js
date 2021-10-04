@@ -1,8 +1,8 @@
 const express = require('express');
-
+const cors = require('cors');
 require('dotenv').config();
 const sequileze = require('./back/db/conexion');
-const indexView = require('./back/views/indexView');
+const loginView = require('./back/views/loginView');
 
 
 
@@ -19,11 +19,6 @@ app.use(express.json())
 
 app.use(express.urlencoded({extended:false}));
 
-app.use(express.static(__dirname + '/public'));
-app.set('view engine','ejs');
-app.set('views', __dirname + '/views');
-app.use('/resources',express.static('public'));
-app.use('/resource',express.static(__dirname + '/public'));
 
 
 async function serverStart() {
@@ -40,7 +35,7 @@ async function serverStart() {
 
 serverStart();
 
-indexView(app);
+loginView(app);
 
 
 
