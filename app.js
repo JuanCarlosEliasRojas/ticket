@@ -3,25 +3,16 @@ const cors = require('cors');
 require('dotenv').config();
 const sequileze = require('./back/db/conexion');
 const loginView = require('./back/Views/loginView');
-
-
-
 const app = express();
 app.use(cors());
 const session = require('express-session');
-
 app.use(session({
     secret:'secret',
     resave:true,
     saveUninitialized:true
 }));
-
 app.use(express.json())
-
 app.use(express.urlencoded({extended:false}));
-
-
-
 async function serverStart() {
     try {
         await sequileze.authenticate();
