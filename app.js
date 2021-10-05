@@ -2,11 +2,12 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const sequileze = require('./back/db/conexion');
-const loginView = require('./back/views/loginView');
+const loginView = require('./back/Views/loginView');
 
 
 
 const app = express();
+app.use(cors());
 const session = require('express-session');
 
 app.use(session({

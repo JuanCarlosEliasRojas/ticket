@@ -1,4 +1,4 @@
-const { and } = require("sequelize/types");
+
 
 function validacion() {
     user = document.getElementById("user").value;
@@ -32,10 +32,11 @@ async function login(){
     const data = await url.json();
     console.log(data.token);
     if (data.token != "Usuario no autenticado." && data.token != undefined) {
-        localStorage.setItem('Presupuestos_token',JSON.stringify(data.token)) 
+        localStorage.setItem('token',JSON.stringify(data.token)) 
        
         window.location="./index.html"; 
     } else {
         alert("Usuario o contraseña incorrectos.")
+        console.log(data);
     }
 }

@@ -1,11 +1,12 @@
 const loginController = require('../controller/loginController')
-const validation = require('../middleware/validation/validation')
+const validation = require('../middleware/validation')
 
-module.exports = async (app) =>{
-    app.post('/login',async(req,res)=>{
+module.exports = async (app) => {
+    app.post('/login',validation.loginValidation,async(req,res) => {
         let user = req.body;
-        res.send(await loginController.login(user));
+        let token = await loginController.login(user);
+    
         res.send({'token':token});
-
+        console.log(token);
     });
-}
+};
