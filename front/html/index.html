@@ -225,8 +225,38 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+                    <div class="container">
+                        <main>
+                          <div class="py-5 text-center">
+                            <h2>Presupuestos</h2>
+                          </div>
+                          <button id="btnNuevo"  type="button" onclick="nuevo()"><i class="fas fa-plus-circle"></i> Nuevo presupuesto</button>
+                          <div class="row 3">
+                            <div class="col-12">
+                              <h4 class="mb-3" style="margin-left: 400px;">Tabla de presupuestos</h4>
+                              <div class="container" id="contPresupuestos">
+                                <table class="table">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">ID presupuesto</th>
+                                      <th scope="col">Fecha de creación</th>
+                                      <th scope="col">Proyecto</th>
+                                      <th scope="col">Versiones</th>
+                                      <th scope="col">Acciones</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody class="readpresupuesto">
+                                    <!-- Productos -->
+                                  </tbody>
+                                </table>
+                              </div>
+                              
+                              
+                              
+                            </div>
+                          </div>
 
-
+              
 
 
                 </div>
@@ -236,14 +266,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
+            
 
         </div>
         <!-- End of Content Wrapper -->
@@ -285,13 +308,14 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.min.js"></script>
+    <script src="../js/index.js"></script>
 
     <!-- Page level plugins -->
-    <script src="../js/Chart.min.js"></script>
+    
 
     <!-- Page level custom scripts -->
-    <script src="../js/chart-area-demo.js"></script>
-    <script src="../js/chart-pie-demo.js"></script>
+   
+   
     <script src="https://kit.fontawesome.com/92e9f2ca72.js" crossorigin="anonymous"></script>
 
 </body>
