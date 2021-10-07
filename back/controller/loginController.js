@@ -9,8 +9,6 @@ module.exports.login = async (user) => {
         let token = jwt.sign({data},process.env.SECRETKEY);
         return token;
     } else {
-        
         return "Usuario no autenticado.";
-       
     }
 }
