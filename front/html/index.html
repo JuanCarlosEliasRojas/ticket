@@ -74,25 +74,11 @@
         </div>
       </li>
 
-      <!-- Nav Item - Utilities Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-          aria-expanded="true" aria-controls="collapseUtilities">
-          <i class="fas fa-fw fa-wrench"></i>
-          <span>Utilities</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">Colors</a>
-            <a class="collapse-item" href="utilities-border.html">Borders</a>
-            <a class="collapse-item" href="utilities-animation.html">Animations</a>
-            <a class="collapse-item" href="utilities-other.html">Other</a>
-          </div>
-        </div>
-      </li>
+  
       <button id="btnNuevo" class="btn btn-dark btn-rounded" type="button" onclick="nuevo()"><i
           class="fas fa-plus-circle"></i> Nuevo presupuesto</button>
+          <td><button id="btnModificar" class="w-40 btn btn-primary btn-success  btnModificar" type="button" onclick="modificar()"><i class="fas fa-pencil-alt"></i>Editar</button> 
+            <button id="btnEliminar" class="w-40 btn btn-danger  btnEliminar" type="button" data-toggle="modal" data-target="#modalEliminar"><i class="fas fa-trash-alt"></i>Eliminar</button></td>
       <!-- Divider -->
       <hr class="sidebar-divider">
     </ul>
@@ -155,7 +141,7 @@
                           <th scope="col">Fecha de creación</th>
                           <th scope="col">Proyecto</th>
                           <th scope="col">Versiones</th>
-                          <th scope="col">Acciones</th>
+                        
                         </tr>
                       </thead>
                       <tbody class="mPresupuestos">
@@ -249,15 +235,15 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">¿Estas seguro de salir?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-body">Seguro que desea Cerrar su sesion.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html" onclick="logOut()">Logout</a>
+            <a class="btn btn-primary" href="login.html" onclick="logOut()">Salir</a>
           </div>
         </div>
       </div>
