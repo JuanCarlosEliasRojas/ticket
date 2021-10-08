@@ -53,32 +53,17 @@
       <!-- Divider -->
       <hr class="sidebar-divider">
 
-      <!-- Heading -->
-      <div class="sidebar-heading">
-        Interface
-      </div>
-
-      <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
-          aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
-          </div>
-        </div>
-      </li>
+     
+   
 
   
       <button id="btnNuevo" class="btn btn-dark btn-rounded" type="button" onclick="nuevo()"><i
           class="fas fa-plus-circle"></i> Nuevo presupuesto</button>
-          <td><button id="btnModificar" class="w-40 btn btn-primary btn-success  btnModificar" type="button" onclick="modificar()"><i class="fas fa-pencil-alt"></i>Editar</button> 
-            <button id="btnEliminar" class="w-40 btn btn-danger  btnEliminar" type="button" data-toggle="modal" data-target="#modalEliminar"><i class="fas fa-trash-alt"></i>Eliminar</button></td>
+          <button id="btnNuevo" class=" btn btn-success" type="button" onclick="modificar()"><i
+            class="fas fa-plus-circle"></i> Editar</button>
+          
+          
+          <button id="btnEliminar" class="w-40 btn btn-danger  btnEliminar" type="button" data-toggle="modal" data-target="#modalEliminar"><i class="fas fa-trash-alt"></i>Eliminar</button>
       <!-- Divider -->
       <hr class="sidebar-divider">
     </ul>
@@ -176,6 +161,8 @@
                 </div>
               </div>
             </div>
+
+    
 
             <div class="modal" tabindex="-1" role="dialog" id="modalEliminar">
               <div class="modal-dialog" role="document">

@@ -22,7 +22,7 @@ function mostrarPresupuestos() {
 }
 
 function modificar(){
-    window.location="./modificar.html";
+    window.location="./editar.html";
 }
 
 async function logOut(){
