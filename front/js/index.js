@@ -21,9 +21,7 @@ function mostrarPresupuestos() {
     getPresupuestos();
 }
 
-function modificar(){
-    window.location="./editar.html";
-}
+
 
 async function logOut(){
     let token = await JSON.parse(localStorage.getItem('token')); 
@@ -37,9 +35,7 @@ async function logOut(){
     }
 }
 
-function nuevo(){
-    window.location="./nuevo.html"; 
-}
+
 
 function aceptarEnv(){
     alert("Enviado correctamente.");
