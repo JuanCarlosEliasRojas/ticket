@@ -9,9 +9,9 @@ function mostrarPresupuestos() {
         for (let i= 0; i < data.length; i++) {
            tpl=`
               <tr> 
-                <td scope="row">${data[i].idBudget}</td>
-                <td>${data[i].creationDate}</td>
-                <td>${data[i].project}</td>
+                <td scope="row">${data[i].id_presupuesto}</td>
+                <td>${data[i].fecha_creacion}</td>
+                <td>${data[i].descripcion}</td>
                 <td>${data[i].version}</td>
                 
               </tr> `
@@ -26,9 +26,9 @@ function modificar(){
 }
 
 async function logOut(){
-    let token = await JSON.parse(localStorage.getItem('Presupuestos_token')); //Obtencion del token
+    let token = await JSON.parse(localStorage.getItem('token')); 
     if (token != undefined) {
-        localStorage.removeItem('Presupuestos_token');
+        localStorage.removeItem('token');
       
         window.location="./login.html";
     } else{
@@ -44,31 +44,4 @@ function nuevo(){
 function aceptarEnv(){
     alert("Enviado correctamente.");
 }
-
-async function aceptarElim(){
-    let token = await JSON.parse(localStorage.getItem('Presupuestos_token')); 
-    const id = document.getElementById("idBudget");
-    const idBudget = String(id.value); 
-    console.log("Este es el id: "+idBudget)
-
-    if (token != null || token != undefined) {
-        let url = await fetch('http://localhost:3000/deletePresupuesto/'+idBudget, {
-            method: "DELETE"
-        });
-        //Regreso de la respuesta
-        const data = await url.text();
-        console.log(data)
-        if (data != "El presupuesto no existe.") {
-            alert('Registro eliminado');
-            window.location="./index.html"; 
-        } else {
-            alert('El registro no exite  y/o ya fue eliminado');
-            window.location="./index.html";
-        }
-    } else{
-        alert("No puede realizar la eliminación de un presupuesto. Su sesión ha cadudado.")
-        window.location="./login.html";
-    }
-}
-
 mostrarPresupuestos();

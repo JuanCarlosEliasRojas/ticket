@@ -22,9 +22,9 @@ module.exports.updatePresupuesto = async (presupuesto) => {
     }
 }
 
-module.exports.deletePresupuesto = async (budgetId) => {
+module.exports.deletePresupuesto = async (id_presupuesto) => {
     let response = new presupuestosModel();
-    let result = await response.delete(budgetId);
+    let result = await response.delete(id_presupuesto);
     if (result != '') {
         return "Presupuesto eliminado.";
     } else {
