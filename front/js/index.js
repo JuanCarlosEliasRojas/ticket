@@ -4,7 +4,7 @@ function mostrarPresupuestos() {
         HTMLResponse.innerHTML = '';
         let url = await fetch('http://localhost:3000/presupuestos');
         const data = await url.json(url);
-        //console.log(data)
+     
         let tpl=``;
         for (let i= 0; i < data.length; i++) {
            tpl=`

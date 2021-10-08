@@ -8,7 +8,7 @@ async function aceptarElim(){
         let url = await fetch('http://localhost:3000/deletePresupuesto/'+idBudget, {
             method: "DELETE"
         });
-        //Regreso de la respuesta
+      
         const data = await url.text();
         console.log(data)
         if (data != "El presupuesto no existe.") {
@@ -28,7 +28,7 @@ function guardarModificado(){
         let descripcion = document.getElementById('descripcion').value;
         let version = document.getElementById('version').value;
         
-        let token = await JSON.parse(localStorage.getItem('token')); //Obtencion del token
+        let token = await JSON.parse(localStorage.getItem('token')); 
 
         if (token != undefined || token != null) {
             let modificar = {
@@ -48,7 +48,7 @@ function guardarModificado(){
             console.log(data)
             if (data != "El presupuesto no existe.") {
                 alert("Presupuesto modificado correctamente.");
-                window.location="./index.html"; //Redirigir a la pagina
+                window.location="./index.html"; 
             } else {
                 alert("El presupuesto no pudo modificarse.")
                 window.location="./index.html";
@@ -71,7 +71,7 @@ function guardar(){
         let proyecto = document.getElementById('nombre').value;
         let version = document.getElementById('version').value;
 
-        let token = await JSON.parse(localStorage.getItem('token')); //Obtencion del token
+        let token = await JSON.parse(localStorage.getItem('token')); 
 
         if (token != undefined || token != null) {
             let dataInsert = {
@@ -91,7 +91,7 @@ function guardar(){
             console.log(data)
             if (data == "Presupuesto creado.") {
                 alert("Presupuesto creado correctamente.");
-                window.location="./index.html"; //Redirigir a la pagina
+                window.location="./index.html"; 
             } else {
                 alert("El presupuesto no pudo crearse.")
                 window.location="./index.html";
